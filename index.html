@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Centro Médico Ñuñoa</title>
+</head>
+<script>
+    let radiologia = [["9878782-1", "FRANCISCA ROJAS", "FONASA"],
+    ["15345241-3", "PAMELA ESTRADA", "ISAPRE"],
+    ["16445345-9", "ARMANDO LUNA", "ISAPRE"],
+    ["17666419-0", "MANUEL GODOY", "FONASA"],
+    ["14989389-K", "RAMON ULLOA", "FONASA"]];
+
+    let paciente1 = ["15554774-5", "PAULA SANCHEZ", "FONASA"]
+    let paciente2 = ["15444147-9", "ANGÉLICA NAVAS", "ISAPRE"]
+    let paciente3 = ["17879423-9", "ANA KLAPP", "ISAPRE"]
+    let paciente4 = ["1547423-6", "FELIPE MARDONES", "ISAPRE"]
+    let paciente5 = ["16554741-K", "DIEGO MARRE", "FONASA"]
+    let paciente6 = ["9747535-8", "CECILIA MENDEZ", "ISAPRE"]
+    let paciente7 =  ["11254785-5", "MARCIAL SUAZO", "ISAPRE"]
+    let traumatologia = [paciente1, paciente2, paciente3, paciente4, paciente5, paciente6, paciente7]
+
+
+    let dental = [
+    ["11123425-6", "MARCELA RETAMAL", "ISAPRE"],
+    ["9878789-2", "ANGEL MUÑOZ", "ISAPRE"],
+    ["7998789-5", "MARIO KAST", "FONASA"],
+    ["18887662-K", "KARIN FERNANDEZ", "FONASA"],
+    ["17665461-4", "HUGO SANCHEZ", "FONASA"],
+    ["14441281-0", "ANA SEPULVEDA", "ISAPRE"]];
+
+
+        let listaespecialidad1 = radiologia.length
+        let i = 0
+        let j = 0
+        for (i = 0; i < listaespecialidad1; i++) {
+        console.log(radiologia[i])
+        listapaciente1 = radiologia[i].length
+            for (j = 0; j < listapaciente1; j++) {
+                pacientes1 = radiologia[i][j]
+                console.log("radiologia", pacientes1)
+            }
+        }
+
+        let listaespecialidad2 = traumatologia.length
+        for (i = 0; i < listaespecialidad2; i++) {
+        console.log(traumatologia[i])
+        listapaciente2 = traumatologia[i].length
+            for (j = 0; j < listapaciente2; j++) {
+                pacientes2 = traumatologia[i][j]
+                console.log("traumatologia", pacientes2)
+            }
+        }
+
+        let listaespecialidad3 = dental.length
+        for (i = 0; i < listaespecialidad3; i++) {
+        console.log(dental[i])
+        listapaciente3 = dental[i].length
+            for (j = 0; j < listapaciente3; j++) {
+                pacientes3 = dental[i][j]
+                console.log("dental", pacientes3)
+            }
+        }
+        
+        
+        function trau() {
+    
+
+    let paciente1 = {
+        hora : "8:00",
+        especialista : "MARIA PAZ ALTUZARRA",
+        nombre : "PAULA SANCHEZ", 
+        rut : "15554774-5", 
+        prevision : "FONASA"}
+    let paciente2 = {
+        hora : "10:00",
+        especialista : "RAUL ARAYA",
+        nombre : "ANGÉLICA NAVAS", 
+        rut : "15444147-9", 
+        prevision : "ISAPRE"}
+    let paciente3 = {
+        hora : "10:30",
+        especialista : "MARIA ARRIAGADA",
+        nombre : "ANA KLAPP", 
+        rut : "17879423-9", 
+        prevision : "ISAPRE"}
+    let paciente4 = {
+        hora : "11:00",
+        especialista : "ALEJANDRO BADILLA",
+        nombre : "FELIPE MARDONES", 
+        rut : "1547423-6", 
+        prevision : "ISAPRE"}
+    let paciente5 = {
+        hora : "11:30",
+        especialista : "CECILIA BUDNIK",
+        nombre : "DIEGO MARRE", 
+        rut : "16554741-K", 
+        prevision : "FONASA"}
+    let paciente6 = {
+        hora : "12:00",
+        especialista : "ARTURO CAVAGNARO",
+        nombre : "CECILIA MENDEZ", 
+        rut : "9747535-8", 
+        prevision : "ISAPRE"}
+    let paciente7 =  {
+        hora : "12:30",
+        especialista : "ANDRES KANACRI",
+        nombre : "MARCIAL SUAZO",
+        rut : "11254785-5",  
+        prevision : "ISAPRE"}
+
+        let traumatologia = [paciente1, paciente2, paciente3, paciente4, paciente5, paciente6, paciente7]
+        let a = (traumatologia.length) - 1
+
+        let listaespecialidad2 = traumatologia.length
+        for (i = 0; i < listaespecialidad2; i++) {
+        console.log(traumatologia[i])
+                console.log("hora", traumatologia[i]["hora"])
+                console.log("especialista", traumatologia[i]["especialista"])
+                console.log("nombre", traumatologia[i]["nombre"])
+                console.log("rut", traumatologia[i]["rut"]) 
+                console.log("prevision", traumatologia[i]["prevision"])
+                document.write('<table><tr><td>', traumatologia[i]["hora"], '</td><td>', traumatologia[i]["especialista"], '</td><td>', traumatologia[i]["nombre"], '</td><td>', traumatologia[i]["rut"], '</td><td>', traumatologia[i]["prevision"], '</td></tr></table>')
+//document.write('     ', traumatologia[i]["hora"], '      ', traumatologia[i]["especialista"], '     ', traumatologia[i]["nombre"], '      ', traumatologia[i]["rut"], '     ', traumatologia[i]["prevision"], '<br>')
+        }
+document.write('<p>primero en traumatologia</p> ', traumatologia[0]["nombre"], ' - ', traumatologia[0]["prevision"], '<p> ||  ultimo en traumatologia</p> ', traumatologia[a]["nombre"], ' - ', traumatologia[a]["prevision"])
+}
+        
+        
+        
+document.write('<p>Estadisticas centro medico ñuñoa</p>');
+</script>
+<body>
+</body>
+</html>
