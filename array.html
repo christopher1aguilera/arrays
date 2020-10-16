@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Centro Médico Ñuñoa</title>
+</head>
+<button onclick = "trau()">traumatologia</button>
+<button onclick = "radio()">radiologia</button>
+<button onclick = "dental()">dental</button>
+<script>
+function radio() {
+    document.write('<p>radiologia</p>')
+    let paciente1 = {
+        hora:'11:00',
+        especialista: 'IGNACIO SCHULZ',
+        nombre: 'FRANCISCA ROJAS',
+        rut:'9878782-1',
+        prevision:"FONASA"}
+    let paciente2 = {
+        hora:'11:30',
+        especialista: 'FEDERICO SUBERCASEAUX',
+        nombre: 'PAMELA ESTRADA',
+        rut:'15345241-3',
+        prevision:'ISAPRE'}
+    let paciente3 = {
+        hora:'15:00',
+        especialista: 'FERNANDO WURTHZ',
+        nombre: 'ARMANDO LUNA',
+        rut:'16445345-9',
+        prevision:'ISAPRE'}
+    let paciente4 = {
+        hora:'15:30',
+        especialista: 'ANA MARIA GODOY',
+        nombre: 'MANUEL GODOY',
+        rut:'17666419-0',
+        prevision:'FONASA'}
+    let paciente5 = {
+        hora:'16:00',
+        especialista: 'PATRICIA SUAZO',
+        nombre: 'RAMON ULLOA',
+        rut:'14989389-K',
+        prevision:'FONASA'}
+
+    let radiologia = [paciente1, paciente2, paciente3, paciente4, paciente5]
+    let a = (radiologia.length) - 1
+    let listaespecialidad2 = radiologia.length
+
+    for (i = 0; i < listaespecialidad2; i++) {
+        console.log(radiologia[i])
+        console.log("hora", radiologia[i]["hora"])
+        console.log("especialista", radiologia[i]["especialista"])
+        console.log("nombre", radiologia[i]["nombre"])
+        console.log("rut", radiologia[i]["rut"]) 
+        console.log("prevision", radiologia[i]["prevision"])
+        if (i == 0){
+            document.write(`<table><tr><td> ${radiologia[i]["hora"]} </td><td> ${radiologia[i]["especialista"]} </td><td> ${radiologia[i]["nombre"]} </td><td> ${radiologia[i]["rut"]} </td><td> ${radiologia[i]["prevision"]} </td></tr>`)
+        }
+        else if (i == radiologia.length -1) {
+            document.write(`<tr><td> ${radiologia[i]["hora"]} </td><td> ${radiologia[i]["especialista"]} </td><td> ${radiologia[i]["nombre"]} </td><td> ${radiologia[i]["rut"]} </td><td> ${radiologia[i]["prevision"]} </td></tr></table>`)
+        }
+        else {
+            document.write(`<tr><td> ${radiologia[i]["hora"]} </td><td> ${radiologia[i]["especialista"]} </td><td> ${radiologia[i]["nombre"]} </td><td> ${radiologia[i]["rut"]} </td><td> ${radiologia[i]["prevision"]} </td></tr>`)
+        }
+    }
+document.write('<p>primero en radiologia ', radiologia[0]["nombre"], ' - ', radiologia[0]["prevision"], ' ||  ultimo en radiologia ', radiologia[a]["nombre"], ' - ', radiologia[a]["prevision"])
+}
+
+function dental() {
+    document.write('<p>dental</p>')
+    let paciente1 = {
+        hora:'8:30',
+        especialista: 'ANDREA ZUÑIGA',
+        nombre: 'MARCELA RETAMAL',
+        rut:'11123425-6',
+        prevision:'ISAPRE'}
+    let paciente2 = {
+        hora:'11:00',
+        especialista: 'MARIA PIA ZAÑARTU',
+        nombre: 'ANGEL MUÑOZ',
+        rut:'9878789-2',
+        prevision:'ISAPRE'}
+    let paciente3 = {
+        hora:'11:30',
+        especialista: 'SCARLETT WITTING',
+        nombre: 'MARIO KAST',
+        rut: '7998789-5',
+        prevision: 'FONASA'}
+    let paciente4 = {
+        hora:'12:00',
+        especialista: 'ARTURO CAVAGNARO',
+        nombre: 'CECILIA MENDEZ',
+        rut: '9747535-8',
+        prevision: 'ISAPRE'}
+    let paciente5 = {
+        hora:'13:00',
+        especialista: 'FRANCISCO VON TEUBER',
+        nombre: 'KARIN FERNANDEZ',
+        rut:'18887662-K',
+        prevision:'FONASA'}
+    let paciente6 = {
+        hora:'13:30',
+        especialista: 'EDUARDO VIÑUELA',
+        nombre: 'HUGO SANCHEZ',
+        rut:'17665461-4',
+        prevision:'FONASA'}
+    let paciente7 = {
+        hora:'14:00',
+        especialista: 'RAQUEL VILLASECA',
+        nombre: 'ANA SEPULVEDA',
+        rut:'14441281-0',
+        prevision:'ISAPRE'}
+
+    let dental = [paciente1, paciente2, paciente3, paciente4, paciente5, paciente6, paciente7]
+    let a = (dental.length) - 1
+    let listaespecialidad2 = dental.length
+
+    for (i = 0; i < listaespecialidad2; i++) {
+        console.log(dental[i])
+        console.log("hora", dental[i]["hora"])
+        console.log("especialista", dental[i]["especialista"])
+        console.log("nombre", dental[i]["nombre"])
+        console.log("rut", dental[i]["rut"]) 
+        console.log("prevision", dental[i]["prevision"])
+        if (i == 0){
+            document.write(`<table><tr><td> ${dental[i]["hora"]} </td><td> ${dental[i]["especialista"]} </td><td> ${dental[i]["nombre"]} </td><td> ${dental[i]["rut"]} </td><td> ${dental[i]["prevision"]} </td></tr>`)
+        }
+        else if (i == dental.length -1) {
+            document.write(`<tr><td> ${dental[i]["hora"]} </td><td> ${dental[i]["especialista"]} </td><td> ${dental[i]["nombre"]} </td><td> ${dental[i]["rut"]} </td><td> ${dental[i]["prevision"]} </td></tr></table>`)
+        }
+        else {
+            document.write(`<tr><td> ${dental[i]["hora"]} </td><td> ${dental[i]["especialista"]} </td><td> ${dental[i]["nombre"]} </td><td> ${dental[i]["rut"]} </td><td> ${dental[i]["prevision"]} </td></tr>`)
+        }
+    }
+document.write('<p>primero en dental ', dental[0]["nombre"], ' - ', dental[0]["prevision"], ' ||  ultimo en dental ', dental[a]["nombre"], ' - ', dental[a]["prevision"])
+}
+
+function trau() {
+    document.write('<p>traumatologia</p>')
+    let paciente1 = {
+        hora : "8:00",
+        especialista : "MARIA PAZ ALTUZARRA",
+        nombre : "PAULA SANCHEZ", 
+        rut : "15554774-5", 
+        prevision : "FONASA"}
+    let paciente2 = {
+        hora : "10:00",
+        especialista : "RAUL ARAYA",
+        nombre : "ANGÉLICA NAVAS", 
+        rut : "15444147-9", 
+        prevision : "ISAPRE"}
+    let paciente3 = {
+        hora : "10:30",
+        especialista : "MARIA ARRIAGADA",
+        nombre : "ANA KLAPP", 
+        rut : "17879423-9", 
+        prevision : "ISAPRE"}
+    let paciente4 = {
+        hora : "11:00",
+        especialista : "ALEJANDRO BADILLA",
+        nombre : "FELIPE MARDONES", 
+        rut : "1547423-6", 
+        prevision : "ISAPRE"}
+    let paciente5 = {
+        hora : "11:30",
+        especialista : "CECILIA BUDNIK",
+        nombre : "DIEGO MARRE", 
+        rut : "16554741-K", 
+        prevision : "FONASA"}
+    let paciente6 = {
+        hora : "12:00",
+        especialista : "ARTURO CAVAGNARO",
+        nombre : "CECILIA MENDEZ", 
+        rut : "9747535-8", 
+        prevision : "ISAPRE"}
+    let paciente7 =  {
+        hora : "12:30",
+        especialista : "ANDRES KANACRI",
+        nombre : "MARCIAL SUAZO",
+        rut : "11254785-5",  
+        prevision : "ISAPRE"}
+
+    let traumatologia = [paciente1, paciente2, paciente3, paciente4, paciente5, paciente6, paciente7]
+    let a = (traumatologia.length) - 1
+    let listaespecialidad2 = traumatologia.length
+
+    for (i = 0; i < listaespecialidad2; i++) {
+        console.log(traumatologia[i])
+        console.log("hora", traumatologia[i]["hora"])
+        console.log("especialista", traumatologia[i]["especialista"])
+        console.log("nombre", traumatologia[i]["nombre"])
+        console.log("rut", traumatologia[i]["rut"]) 
+        console.log("prevision", traumatologia[i]["prevision"])
+        if (i == 0){
+            document.write(`<table><tr><td> ${traumatologia[i]["hora"]} </td><td> ${traumatologia[i]["especialista"]} </td><td> ${traumatologia[i]["nombre"]} </td><td> ${traumatologia[i]["rut"]} </td><td> ${traumatologia[i]["prevision"]} </td></tr>`)
+        }
+        else if (i == traumatologia.length -1) {
+            document.write(`<tr><td> ${traumatologia[i]["hora"]} </td><td> ${traumatologia[i]["especialista"]} </td><td> ${traumatologia[i]["nombre"]} </td><td> ${traumatologia[i]["rut"]} </td><td> ${traumatologia[i]["prevision"]} </td></tr></table>`)
+        }
+        else {
+            document.write(`<tr><td> ${traumatologia[i]["hora"]} </td><td> ${traumatologia[i]["especialista"]} </td><td> ${traumatologia[i]["nombre"]} </td><td> ${traumatologia[i]["rut"]} </td><td> ${traumatologia[i]["prevision"]} </td></tr>`)
+        }
+    }
+document.write('<p>primero en traumatologia ', traumatologia[0]["nombre"], ' - ', traumatologia[0]["prevision"], ' ||  ultimo en traumatologia ', traumatologia[a]["nombre"], ' - ', traumatologia[a]["prevision"])
+}
+</script>
+<body>
+</body>
+</html>
